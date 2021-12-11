@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Deploying an Ethereum smart contract with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repo is almost exactly based on a project developed by [Buildspace](https://buildspace.so/) team. 
 
-## Available Scripts
+If you'd like to do it yourself, please take a look at <b>Build a Web3 App with Solidity + Ethereum Smart Contracts</b> which is developed by the Buildspace team. It allows you to write a smart contract with very little prior knowledge about blockchain.
 
-In the project directory, you can run:
+One of the main components of this project is `contracts/WavePortal.sol`. Although it's a very simple contract but it allows you to understand how smart contracts work.
 
-### `npm start`
+This project is reliant on another [repo](https://github.com/ROZBEH/ethereum-smart-contract) for the ethereum smart contract part.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Contract deployed, now what?
 
-### `npm test`
+In our previous [repo](https://github.com/ROZBEH/ethereum-smart-contract) we deployed the ethereum smart contract to the ethereum blockchain network. Yes we wrote the contract, yes we deployed the contract to the ethereum test network. Now it's time to use the contract in an application. In order to do so, we need to put together the front-end part of it.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Set up
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Requirements. Please install `react-loader-spinner` and `ethers` by running `npm install --save package_name`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Before running the script, we have to provide contract information to our React front-end app. 
 
-### `npm run eject`
+- Inside `App.js` we provide the contract address with 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+const contractAddress = "0xaC0067a300b1C115C7334c988878Da343181a086"
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- We also need to provide contract ABI. Once we deploy our smart contract like [here](https://github.com/ROZBEH/ethereum-smart-contract), it will generate an ABI file for us. We need to pass this ABI file to our front-end app. In the case of this example the ABI file is saved inside `utils` folder and then imported inside `App.js`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Finally, its time to run the app. `npm start`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy writing a smart contract! This was my first time writing a smart contract and I was genuinely happy and surprised by what I learned. I hope you feel the same way. 

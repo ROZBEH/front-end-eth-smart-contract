@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 64px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dataContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 600px;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bio {
+  text-align: center;
+  color: gray;
+  margin-top: 16px;
+}
+
+.connectButton {
+  margin-top: 16px;
+  text-align: center;
+  padding: 8px;
+  /* position: relative; */
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 50px;
+  width: 160px;
+  opacity: 1;
+  background-color: rgb(198, 227, 245);
+  border: 1px solid rgba(22, 76, 167, 0.6);
+}
+.connectButton:hover{
+  background-color: #87CEFA;
+}
+
+.messageBox {
+  cursor: pointer;
+  margin-top: 16px;
+  height: 30px;
+  width: 320px;
+  text-align: center;
+  padding: 8px;
+  border: 1;
+  border-radius: 50px;
+}
+
+.waveButton {
+  margin-top: 16px;
+  text-align: center;
+  padding: 8px;
+  /* position: relative; */
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 50px;
+  width: 160px;
+  opacity: 1;
+  background-color: #87CEFA;
+  border: 1px solid rgba(22, 76, 167, 0.6);
+}
+.waveMining {
+  margin-top: 16px;
+  padding: 8px;
+  border: 0;
+  color:#FF4500	;
+  text-align: center;
+  border-radius: 5px;
+  
+}
+.waveMined {
+  margin-top: 16px;
+  padding: 8px;
+  border: 0;
+  color: green;
+  text-align: center;
+  border-radius: 5px;
+  
+}
+.submitForm{
+  /* display:flex;
+  justify-content: center; */
+  text-align: center;
+}
+.spinner{
+  text-align: center;
+  background-color: blue;
+}
+.stepsContract{
+  text-align: left;
+}
+
+.waveButton span {
+  color: #164ca7;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+.waveButton:hover {
+  animation: rotate 0.7s ease-in-out both;
+}
+.waveButton:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
   }
 }
