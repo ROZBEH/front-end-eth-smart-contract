@@ -4,18 +4,18 @@ This repo is almost exactly based on a project developed by [Buildspace](https:/
 
 If you'd like to do it yourself, please take a look at <b>Build a Web3 App with Solidity + Ethereum Smart Contracts</b> which is developed by the Buildspace team. It allows you to write a smart contract with very little prior knowledge about blockchain.
 
-One of the main components of this project is `contracts/WavePortal.sol`. Although it's a very simple contract but it allows you to understand how smart contracts work.
-
 This project is reliant on another [repo](https://github.com/ROZBEH/ethereum-smart-contract) for the ethereum smart contract part.
 
 
 ## Contract deployed, now what?
 
-In our previous [repo](https://github.com/ROZBEH/ethereum-smart-contract) we deployed the ethereum smart contract to the ethereum blockchain network. Yes we wrote the contract, yes we deployed the contract to the ethereum test network. Now it's time to use the contract in an application. In order to do so, we need to put together the front-end part of it.
+In our previous [repo](https://github.com/ROZBEH/ethereum-smart-contract) we deployed the ethereum smart contract to the ethereum blockchain network. Yes we wrote the contract, yes we deployed the contract to the ethereum test network. Now it's time to use the contract in an application. In order to do so, we need to put together the front-end pieces.
 
 
 
 ## Set up
+
+- Start setting up the environment by running `npm install`
 
 - Requirements. Please install `react-loader-spinner` and `ethers` by running `npm install --save package_name`.
 
